@@ -4,7 +4,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky install",
-    "build": "pnpm --filter=@qftjs/* run build",
+    "build": "pnpm --filter=@qftjs/* run build&&pnpm --filter=minipcmplayer run build",
     "commit": "cz",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",

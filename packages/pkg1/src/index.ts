@@ -4,5 +4,5 @@ function fun1() {
   pkg2();
   console.log('I am package 1');
 }
-
+export { fun1 };
 export default fun1;

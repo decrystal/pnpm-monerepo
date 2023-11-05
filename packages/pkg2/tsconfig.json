@@ -1,9 +1,10 @@
 {
   "include": ["src", "types", "test"],
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
+    "useDefineForClassFields": true,
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,

@@ -20,5 +20,8 @@
   "dependencies": {
     "@qftjs/monorepo2": "workspace:*",
     "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9"
   }
 }
