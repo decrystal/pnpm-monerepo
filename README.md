@@ -1,8 +1,5 @@
 # pnpm + workspace 构建你的 monorepo 工程
 
-## 欢迎关注我的公众号
-![微信logo](https://github.com/astonishqft/pnpm-monorepo-demo/assets/15138753/87dc79ca-da1b-4a74-80bb-5bd12765ef11)
-
 ## 什么是monorepo？
 
 什么是 monorepo？以及和 multirepo 的区别是什么?
@@ -67,11 +64,22 @@ export default fun2;
 
 分别在 pkg1 和 pkg2 下新增 `.fatherrc.ts` 和 `tsconfig.ts` 配置文件。
 
+注意这里的导出的的位置是umd，cjs，esm
+
 ```ts
 // .fatherrc.ts
 export default {
-  target: 'node',
-  cjs: { type: 'babel', lazy: true },
+  target: "es2020",
+  cjs: { type: "babel", lazy: true },
+  esm: {
+    type: "rollup",
+  },
+  // cjs: {
+  //   type: "rollup",
+  // },
+  umd: {
+    name: "foo",
+  },
   disableTypeCheck: false,
 };
 ```
